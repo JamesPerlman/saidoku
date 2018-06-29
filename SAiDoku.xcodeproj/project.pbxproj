@@ -25,6 +25,8 @@
 /* Begin PBXFileReference section */
 		EAB7D39420E446510075E6FC /* SAiDoku */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SAiDoku; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB7D39720E446510075E6FC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		EAB7D39E20E59CCD0075E6FC /* CODE */ = {isa = PBXFileReference; lastKnownFileType = text; path = CODE; sourceTree = "<group>"; };
+		EAB7D39F20E5BD230075E6FC /* puzzle-easy */ = {isa = PBXFileReference; lastKnownFileType = text; path = "puzzle-easy"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,8 @@
 		EAB7D39620E446510075E6FC /* SAiDoku */ = {
 			isa = PBXGroup;
 			children = (
+				EAB7D39E20E59CCD0075E6FC /* CODE */,
+				EAB7D39F20E5BD230075E6FC /* puzzle-easy */,
 				EAB7D39720E446510075E6FC /* main.swift */,
 			);
 			path = SAiDoku;

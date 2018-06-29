@@ -1,0 +1,49 @@
+
+
+func existingNumbersForRowsIn(board: Int, region: Int) -> Array<String> {
+var numbers: Array<String> = []
+for x in 0...2 {
+for y in 0...2 {
+if (array[board][x][region][y] != " ") {
+numbers.append( array[board][x][region][y] );
+}
+}
+}
+
+return numbers
+}
+
+print("Missing numbers from row 0: \( missingNumbers(existingNumbersForRowsIn(board: 0, region: 0))  )")
+
+########
+
+984531.7261...7...257..98..3...6..1....37.92...9..5....3...6....45.18.961967..28.
+
+
+
+
+func missingNumbers(_ existingNumbers: Array<String>) -> Array<String> {
+return Array(Set(["1","2","3","4","5","6","7","8","9"]).subtracting(Set(existingNumbers)))
+}
+
+func existingNumbersForColumnsIn(board: Int, region: Int) -> Array<String> {
+var numbers: Array<String> = []
+for x in 0...2 {
+for y in 0...2 {
+print("[\(x)][\(board)][\(y)][\(region)]")
+if (array[x][board][y][region] != " ") {
+numbers.append( array[board][x][region][y] );
+}
+}
+}
+
+return numbers
+}
+
+print("Numbers from column 0: \( existingNumbersForColumnsIn(board: 0, region: 0)  )")
+print("Missing numbers from column 0: \( missingNumbers(existingNumbersForColumnsIn(board: 0, region: 0))  )")
+
+
+
+
+
