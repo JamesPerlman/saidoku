@@ -22,5 +22,5 @@ func columnIndex(of index: Int) -> Int {
 
 // returns the section index of a row or column index
 func sectionIndex(of regionIndex: Int) -> Int {
-    return regionIndex == 0 ? 0 : (regionIndex + 2) / 3 - 1;
+    return (regionIndex + 3) / 3 - 1;
 }
