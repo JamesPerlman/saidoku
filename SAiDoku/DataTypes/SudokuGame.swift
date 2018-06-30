@@ -102,7 +102,7 @@ struct SudokuGame {
                     })
                     // Try to solve each new game
                     .forEach({ game in
-                        DispatchQueue.global(qos: .background).async {
+                        DispatchQueue.global(qos: .background).sync {
                             game.solve(success)
                         }
                     })
