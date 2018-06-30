@@ -109,7 +109,6 @@ struct SudokuGame {
             failure()
             
         } else {
-            var solved = false;
             // Loop through all cells
             cells
                 // Only solve for cells that have possibilities
@@ -134,7 +133,11 @@ struct SudokuGame {
                         })
                         // Try to solve each new game
                         .forEach({ game in
-                            game.solve(success)
+                            // TODO: figure out async
+                            // async doesn't work??? wtf
+                            DispatchQueue.global(qos: .background).sync {
+                                game.solve(success)
+                            }
                         })
                 })
         }
