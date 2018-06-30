@@ -92,6 +92,7 @@ struct SudokuGame {
             }).reduce(0, +) == cells.count
     }
     
+    // A game is invalid if some of the rules are broken
     var isInvalid: Bool {
         return cells.first(where: { cell in
             if cell.hasValue {
@@ -102,6 +103,7 @@ struct SudokuGame {
         }) != nil
     }
     
+    // The good stuff
     func solve(_ success: @escaping (SudokuGame) -> (), _ failure: @escaping () -> () = { }) {
         if isSolved {
             success(self)
@@ -153,15 +155,4 @@ struct SudokuGame {
         }
         return SudokuGame(cells: newCells)
     }
-    /*
-     // 2d array of rows
-     var rows:[SudokuRegion] {
-     return SudokuRegion(cells: (0..<9)
-     .map({ i -> [SudokuCell] in
-     Array((9 * i)..<(9 * (i + 1)))
-     .map({ j -> SudokuCell in
-     self.cells[9 * i + j]
-     })
-     }))
-     }*/
 }
