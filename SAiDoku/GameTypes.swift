@@ -7,23 +7,9 @@
 //
 
 import Foundation
-
-//: Playground - noun: a place where people can play
-
 import Dispatch
 
-struct SudokuPuzzle {
-    let state: [[Int]]
-}
-
-
-
-var str = "Hello, playground"
-
-// arr[i][j]
-
-
-// The value of a single cell
+// A single cell
 struct SudokuCell {
     let index: Int
     let value: Int?
@@ -36,15 +22,6 @@ struct SudokuCell {
     // A cell is invalid if it has no value and no possibilities
     var isInvalid: Bool {
         return value == nil && possibilities.isEmpty
-    }
-}
-
-// Can be row, column, or 3x3 section
-struct SudokuRegion {
-    let cells: [SudokuCell]
-    
-    var isComplete: Bool {
-        return cells.count == 9
     }
 }
 
