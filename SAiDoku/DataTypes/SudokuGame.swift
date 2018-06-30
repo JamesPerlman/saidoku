@@ -1,5 +1,5 @@
 //
-//  GameTypes.swift
+//  SudokuGame.swift
 //  SAiDoku
 //
 //  Created by James Perlman on 6/29/18.
@@ -9,21 +9,7 @@
 import Foundation
 import Dispatch
 
-// A single cell
-struct SudokuCell {
-    let index: Int
-    let value: Int?
-    let possibilities: [Int]
-    
-    var hasValue: Bool {
-        return value != nil
-    }
-    
-    // A cell is invalid if it has no value and no possibilities
-    var isInvalid: Bool {
-        return value == nil && possibilities.isEmpty
-    }
-}
+
 
 struct SudokuGame {
     let cells: [SudokuCell]
@@ -52,6 +38,7 @@ struct SudokuGame {
         self.cells = cells
         self.rawValues = rawValues
         
+        print("Initial problem:")
         print(self.description)
     }
     

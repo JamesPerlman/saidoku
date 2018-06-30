@@ -1,5 +1,5 @@
 import Foundation
-
+import Dispatch
 // http://patorjk.com/software/taag/#p=testall&f=ANSI%20Shadow&t=SAiDoku
 print("""
 
@@ -25,6 +25,8 @@ let LIVE_DEBUG_PRINT_STEPS = false;
 
 let game = SudokuGame(gameString)
 game.solve({ result in
+    
+    print("Solution:")
     print(result.description);
     exit(0);
 })

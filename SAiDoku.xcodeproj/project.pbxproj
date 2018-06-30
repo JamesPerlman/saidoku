@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		EAB7D39820E446510075E6FC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB7D39720E446510075E6FC /* main.swift */; };
 		F445B32E20E700320023C2E3 /* Int+initWithCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F445B32D20E700320023C2E3 /* Int+initWithCharacter.swift */; };
-		F460AEDE20E6EDAA00234027 /* GameTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460AEDD20E6EDAA00234027 /* GameTypes.swift */; };
+		F460AEDE20E6EDAA00234027 /* SudokuGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460AEDD20E6EDAA00234027 /* SudokuGame.swift */; };
 		F4E8FE5820E70C3100784DFF /* IndexMappingHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E8FE5720E70C3100784DFF /* IndexMappingHelpers.swift */; };
 		F4E8FE5A20E7203F00784DFF /* [Int?]+Sudoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E8FE5920E7203F00784DFF /* [Int?]+Sudoku.swift */; };
 		F4E8FE5C20E7379900784DFF /* Array+removingFirstWhere.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E8FE5B20E7379900784DFF /* Array+removingFirstWhere.swift */; };
 		F4E8FE5E20E73C4000784DFF /* Int+containsDuplicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E8FE5D20E73C4000784DFF /* Int+containsDuplicates.swift */; };
+		F4E8FE6020E7494F00784DFF /* SudokuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E8FE5F20E7494F00784DFF /* SudokuCell.swift */; };
 		F4FFB24820E6F2650080C177 /* SudokuGame+description.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FFB24720E6F2650080C177 /* SudokuGame+description.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,14 +33,14 @@
 /* Begin PBXFileReference section */
 		EAB7D39420E446510075E6FC /* SAiDoku */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SAiDoku; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB7D39720E446510075E6FC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		EAB7D39E20E59CCD0075E6FC /* CODE */ = {isa = PBXFileReference; lastKnownFileType = text; path = CODE; sourceTree = "<group>"; };
 		EAB7D39F20E5BD230075E6FC /* puzzle-easy */ = {isa = PBXFileReference; lastKnownFileType = text; path = "puzzle-easy"; sourceTree = SOURCE_ROOT; };
 		F445B32D20E700320023C2E3 /* Int+initWithCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+initWithCharacter.swift"; sourceTree = "<group>"; };
-		F460AEDD20E6EDAA00234027 /* GameTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTypes.swift; sourceTree = "<group>"; };
+		F460AEDD20E6EDAA00234027 /* SudokuGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuGame.swift; sourceTree = "<group>"; };
 		F4E8FE5720E70C3100784DFF /* IndexMappingHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexMappingHelpers.swift; sourceTree = "<group>"; };
 		F4E8FE5920E7203F00784DFF /* [Int?]+Sudoku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[Int?]+Sudoku.swift"; sourceTree = "<group>"; };
 		F4E8FE5B20E7379900784DFF /* Array+removingFirstWhere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+removingFirstWhere.swift"; sourceTree = "<group>"; };
 		F4E8FE5D20E73C4000784DFF /* Int+containsDuplicates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+containsDuplicates.swift"; sourceTree = "<group>"; };
+		F4E8FE5F20E7494F00784DFF /* SudokuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuCell.swift; sourceTree = "<group>"; };
 		F4FFB24720E6F2650080C177 /* SudokuGame+description.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SudokuGame+description.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,18 +74,42 @@
 		EAB7D39620E446510075E6FC /* SAiDoku */ = {
 			isa = PBXGroup;
 			children = (
-				EAB7D39E20E59CCD0075E6FC /* CODE */,
 				EAB7D39F20E5BD230075E6FC /* puzzle-easy */,
 				EAB7D39720E446510075E6FC /* main.swift */,
+				F4E8FE6120E7496600784DFF /* DataTypes */,
+				F4E8FE6220E7497100784DFF /* Extensions */,
+				F4E8FE6320E7497E00784DFF /* Utils */,
+			);
+			path = SAiDoku;
+			sourceTree = "<group>";
+		};
+		F4E8FE6120E7496600784DFF /* DataTypes */ = {
+			isa = PBXGroup;
+			children = (
+				F460AEDD20E6EDAA00234027 /* SudokuGame.swift */,
+				F4E8FE5F20E7494F00784DFF /* SudokuCell.swift */,
+			);
+			path = DataTypes;
+			sourceTree = "<group>";
+		};
+		F4E8FE6220E7497100784DFF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
 				F445B32D20E700320023C2E3 /* Int+initWithCharacter.swift */,
 				F4E8FE5920E7203F00784DFF /* [Int?]+Sudoku.swift */,
 				F4E8FE5D20E73C4000784DFF /* Int+containsDuplicates.swift */,
-				F460AEDD20E6EDAA00234027 /* GameTypes.swift */,
-				F4E8FE5720E70C3100784DFF /* IndexMappingHelpers.swift */,
 				F4E8FE5B20E7379900784DFF /* Array+removingFirstWhere.swift */,
 				F4FFB24720E6F2650080C177 /* SudokuGame+description.swift */,
 			);
-			path = SAiDoku;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F4E8FE6320E7497E00784DFF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F4E8FE5720E70C3100784DFF /* IndexMappingHelpers.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,10 +170,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4E8FE5A20E7203F00784DFF /* [Int?]+Sudoku.swift in Sources */,
+				F4E8FE6020E7494F00784DFF /* SudokuCell.swift in Sources */,
 				F445B32E20E700320023C2E3 /* Int+initWithCharacter.swift in Sources */,
 				F4E8FE5E20E73C4000784DFF /* Int+containsDuplicates.swift in Sources */,
 				EAB7D39820E446510075E6FC /* main.swift in Sources */,
-				F460AEDE20E6EDAA00234027 /* GameTypes.swift in Sources */,
+				F460AEDE20E6EDAA00234027 /* SudokuGame.swift in Sources */,
 				F4E8FE5820E70C3100784DFF /* IndexMappingHelpers.swift in Sources */,
 				F4FFB24820E6F2650080C177 /* SudokuGame+description.swift in Sources */,
 				F4E8FE5C20E7379900784DFF /* Array+removingFirstWhere.swift in Sources */,
