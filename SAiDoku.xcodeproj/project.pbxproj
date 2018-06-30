@@ -86,8 +86,8 @@
 		F4E8FE6120E7496600784DFF /* DataTypes */ = {
 			isa = PBXGroup;
 			children = (
-				F460AEDD20E6EDAA00234027 /* SudokuGame.swift */,
 				F4E8FE5F20E7494F00784DFF /* SudokuCell.swift */,
+				F460AEDD20E6EDAA00234027 /* SudokuGame.swift */,
 			);
 			path = DataTypes;
 			sourceTree = "<group>";

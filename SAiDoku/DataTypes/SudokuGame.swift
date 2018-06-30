@@ -9,8 +9,6 @@
 import Foundation
 import Dispatch
 
-
-
 struct SudokuGame {
     let cells: [SudokuCell]
     let rawValues: [Int?]
