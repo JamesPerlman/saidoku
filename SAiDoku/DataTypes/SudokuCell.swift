@@ -22,4 +22,8 @@ struct SudokuCell {
     var isInvalid: Bool {
         return value == nil && possibilities.isEmpty
     }
+    
+    var description: String {
+        return "index: \(index),\n value: \(value),\n poss: \(possibilities)\n";
+    }
 }

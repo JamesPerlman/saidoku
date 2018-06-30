@@ -24,9 +24,20 @@ let gameString = "984531.7261...7...257..98..3...6..1....37.92...9..5....3...6..
 let LIVE_DEBUG_PRINT_STEPS = false;
 
 let game = SudokuGame(gameString)
+
+// Use DispatchGroup to pause exit until finished
+let group = DispatchGroup()
+group.enter()
+
 game.solve({ result in
     
-    print("Solution:")
+    DispatchQueue.main.async(execute: group.leave)
+
+    
+    print("Solution:");
     print(result.description);
     exit(0);
 })
+
+
+group.wait()
