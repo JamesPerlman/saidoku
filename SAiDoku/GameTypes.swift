@@ -148,7 +148,9 @@ struct SudokuGame {
         precondition(cell.index == newCell.index, "Can't replace cells with different indices.")
         let i = cell.index
         let newCells = cells.map({ $0.index == i ? newCell : $0 })
-        print(description)
+        if (LIVE_DEBUG_PRINT_STEPS) {
+            print(description)
+        }
         return SudokuGame(cells: newCells)
     }
     /*
